@@ -12,6 +12,8 @@
 function toggleDarkMode() {
   var isDark = document.body.classList.toggle('dark-mode');
   localStorage.setItem('darkMode', isDark ? '1' : '0');
+  var btn = document.getElementById('darkToggle');
+  if (btn) btn.setAttribute('aria-label', isDark ? 'עבור למצב בהיר' : 'עבור למצב כהה');
 }
 
 // ── Mobile hamburger menu ────────────────────────
