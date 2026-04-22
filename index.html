@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a2540" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <title>טכנאי מחשבים ומעבדת מחשבים ברחובות | S.C פתרונות מחשוב</title>
   <meta name="description" content="טכנאי ומעבדת מחשבים באזור השפלה – רחובות, נס ציונה, גדרה, מזכרת בתיה, ראשון לציון ויבנה. תיקון מחשבים, שדרוג חומרה, הסרת וירוסים. שירות עד הבית! 051-506-0413" />
   <meta name="keywords" content="טכנאי מחשבים רחובות, מעבדת מחשבים רחובות, תיקון מחשבים רחובות, טכנאי מחשבים נס ציונה, מעבדת מחשבים נס ציונה, תיקון מחשבים נס ציונה, טכנאי מחשבים גדרה, מעבדת מחשבים גדרה, תיקון מחשבים גדרה, טכנאי מחשבים מזכרת בתיה, תיקון מחשבים מזכרת בתיה, טכנאי מחשבים ראשון לציון, מעבדת מחשבים ראשון לציון, טכנאי מחשבים יבנה, תיקון מחשבים יבנה, טכנאי מחשבים אזור השפלה, שדרוג מחשב, הסרת וירוסים, הרכבת מחשב גיימינג, S.C פתרונות מחשוב" />
@@ -162,12 +165,12 @@
 
     <!-- Logo (right in RTL) -->
     <a href="/" class="nav-logo" aria-label="S.C פתרונות מחשוב - דף הבית">
-      <img src="logo.png" alt="לוגו S.C פתרונות מחשוב" loading="lazy" />
+      <img src="logo.png" alt="לוגו S.C פתרונות מחשוב" width="65" height="65" loading="eager" fetchpriority="high" />
       <span>פתרונות מחשוב</span>
     </a>
 
     <!-- Centre pill nav (desktop only) -->
-    <div class="nav-links-wrap" role="navigation" aria-label="ניווט ראשי">
+    <div class="nav-links-wrap">
       <a href="#hero"     class="nav-link active" data-section="hero">בית</a>
       <a href="#services" class="nav-link" data-section="services">שירותים</a>
       <a href="#pricing"  class="nav-link" data-section="pricing">מחירון</a>
@@ -302,37 +305,37 @@
     <!-- Video slides -->
     <div class="hvp-track">
       <div class="hvp-slide active">
-        <video class="hvp-video" autoplay muted loop playsinline preload="auto">
+        <video class="hvp-video" autoplay muted loop playsinline preload="auto" aria-label="הדגמת שירות תיקון מחשבים">
           <source src="videos/video1.mp4" type="video/mp4">
         </video>
       </div>
       <div class="hvp-slide">
-        <video class="hvp-video" muted loop playsinline preload="auto">
+        <video class="hvp-video" muted loop playsinline preload="none" aria-label="הדגמת שירות מחשוב">
           <source src="videos/video2.mp4" type="video/mp4">
         </video>
       </div>
       <div class="hvp-slide">
-        <video class="hvp-video" muted loop playsinline preload="auto">
+        <video class="hvp-video" muted loop playsinline preload="none" aria-label="הדגמת שירות מחשוב">
           <source src="videos/video3.mp4" type="video/mp4">
         </video>
       </div>
       <div class="hvp-slide">
-        <video class="hvp-video" muted loop playsinline preload="auto">
+        <video class="hvp-video" muted loop playsinline preload="none" aria-label="הדגמת שירות מחשוב">
           <source src="videos/video4.mp4" type="video/mp4">
         </video>
       </div>
       <div class="hvp-slide">
-        <video class="hvp-video" muted loop playsinline preload="auto">
+        <video class="hvp-video" muted loop playsinline preload="none" aria-label="הדגמת שירות מחשוב">
           <source src="videos/video5.mp4" type="video/mp4">
         </video>
       </div>
       <div class="hvp-slide">
-        <video class="hvp-video" muted loop playsinline preload="auto">
+        <video class="hvp-video" muted loop playsinline preload="none" aria-label="הדגמת שירות מחשוב">
           <source src="videos/video6.mp4" type="video/mp4">
         </video>
       </div>
       <div class="hvp-slide">
-        <video class="hvp-video" muted loop playsinline preload="auto">
+        <video class="hvp-video" muted loop playsinline preload="none" aria-label="הדגמת שירות מחשוב">
           <source src="videos/video7.mp4" type="video/mp4">
         </video>
       </div>
@@ -610,39 +613,39 @@
     </div>
     <div class="faq-list" role="list">
       <div class="faq-item" role="listitem" data-reveal="up" style="--d:.00s">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <button class="faq-q" id="faq-btn-1" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a-1">
           <span class="faq-q-inner"><span class="faq-num">01</span>האם מקבלים הצעת מחיר לפני התיקון?</span>
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" role="region">כן, תמיד. לפני שמתחילים כל עבודה נסביר מה הבעיה ונציג מחיר מפורט. רק לאחר שאתה מאשר מתחילים.</div>
+        <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-btn-1">כן, תמיד. לפני שמתחילים כל עבודה נסביר מה הבעיה ונציג מחיר מפורט. רק לאחר שאתה מאשר מתחילים.</div>
       </div>
       <div class="faq-item" role="listitem" data-reveal="up" style="--d:.08s">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <button class="faq-q" id="faq-btn-2" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a-2">
           <span class="faq-q-inner"><span class="faq-num">02</span>תוך כמה זמן מגיע טכנאי המחשבים לביתי ברחובות?</span>
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" role="region">ניתן לתאם הגעה מיידית בהתאם לזמינות. ברוב המקרים טכנאי המחשבים מגיע לרחובות, ראשון לציון ונס ציונה תוך שעות ספורות.</div>
+        <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-btn-2">ניתן לתאם הגעה מיידית בהתאם לזמינות. ברוב המקרים טכנאי המחשבים מגיע לרחובות, ראשון לציון ונס ציונה תוך שעות ספורות.</div>
       </div>
       <div class="faq-item" role="listitem" data-reveal="up" style="--d:.16s">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <button class="faq-q" id="faq-btn-3" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a-3">
           <span class="faq-q-inner"><span class="faq-num">03</span>האם יש עלות לשיחה הראשונה?</span>
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" role="region">לא, אבחון טלפוני ראשוני הוא ללא עלות.</div>
+        <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-btn-3">לא, אבחון טלפוני ראשוני הוא ללא עלות.</div>
       </div>
       <div class="faq-item" role="listitem" data-reveal="up" style="--d:.24s">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <button class="faq-q" id="faq-btn-4" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a-4">
           <span class="faq-q-inner"><span class="faq-num">04</span>אילו אזורים מכוסים על ידי טכנאי המחשבים?</span>
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" role="region">פעילים באזור השפלה: רחובות, ראשון לציון, נס ציונה, יבנה, גדרה וסביבתן. לא בטוח אם מגיעים לאזורך? צור קשר.</div>
+        <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-btn-4">פעילים באזור השפלה: רחובות, ראשון לציון, נס ציונה, יבנה, גדרה וסביבתן. לא בטוח אם מגיעים לאזורך? צור קשר.</div>
       </div>
       <div class="faq-item" role="listitem" data-reveal="up" style="--d:.32s">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        <button class="faq-q" id="faq-btn-5" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-a-5">
           <span class="faq-q-inner"><span class="faq-num">05</span>האם מתקנים ומרכיבים מחשבי גיימינג?</span>
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" role="region">כן! מעבדת המחשבים שלנו מתמחה גם בהרכבה, תיקון ושדרוג מחשבי גיימינג - כולל סידור כבלים מקצועי. ניתן להביא את המחשב למעבדה או לתאם הגעת טכנאי לביתך.</div>
+        <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-btn-5">כן! מעבדת המחשבים שלנו מתמחה גם בהרכבה, תיקון ושדרוג מחשבי גיימינג - כולל סידור כבלים מקצועי. ניתן להביא את המחשב למעבדה או לתאם הגעת טכנאי לביתך.</div>
       </div>
     </div>
   </div>
@@ -717,11 +720,11 @@
         <div class="form-row">
           <div class="form-group">
             <label for="formName">שם מלא <span class="form-req" aria-hidden="true">*</span></label>
-            <input type="text" id="formName" name="name" placeholder="ישראל ישראלי" required autocomplete="name" />
+            <input type="text" id="formName" name="name" placeholder="ישראל ישראלי" required aria-required="true" autocomplete="name" />
           </div>
           <div class="form-group">
             <label for="formPhone">טלפון <span class="form-req" aria-hidden="true">*</span></label>
-            <input type="tel" id="formPhone" name="phone" placeholder="050-000-0000" required autocomplete="tel" />
+            <input type="tel" id="formPhone" name="phone" placeholder="050-000-0000" required aria-required="true" autocomplete="tel" />
           </div>
         </div>
 
@@ -733,7 +736,7 @@
         <div class="form-group">
           <label for="formSubject">נושא פנייה <span class="form-req" aria-hidden="true">*</span></label>
           <div class="form-select-wrap">
-            <select id="formSubject" name="subject" required>
+            <select id="formSubject" name="subject" required aria-required="true">
               <option value="" disabled selected>בחר שירות...</option>
               <option value="הגעת טכנאי לביתי">הגעת טכנאי לביתי</option>
               <option value="הבאת המחשב למעבדה">הבאת המחשב למעבדה</option>
