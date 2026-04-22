@@ -1504,3 +1504,18 @@ body.dark-mode .btn-outline:hover {
 /* Accessibility panel stays light regardless */
 body.dark-mode .access-panel { background: #fff !important; color: #222 !important; }
 body.dark-mode .access-grid button { background: #f4f7fb !important; color: #1a5fb4 !important; }
+
+/* ══════════════════════════════════════
+   REDUCED MOTION — respect OS preference
+══════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html { scroll-behavior: auto; }
+  .hvp-slide { transition: none !important; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
